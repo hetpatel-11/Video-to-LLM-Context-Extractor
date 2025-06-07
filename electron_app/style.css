@@ -1,0 +1,143 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    /* Dark theme gradient background */
+    background: linear-gradient(135deg, #1f2023 0%, #2c3e50 100%); 
+    color: #e0e0e0; /* Default light text color for the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    /* Dark glassmorphic properties */
+    background: rgba(0, 0, 0, 0.25); /* Darker semi-transparent background */
+    backdrop-filter: blur(15px); /* Slightly more blur can look good on dark themes */
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Lighter border for contrast */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35); /* Darker shadow */
+
+    padding: 30px;
+    width: 100%;
+    max-width: 650px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #cccccc; /* Light gray for labels */
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.form-group input[type="text"]::placeholder, 
+.form-group input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input[readonly] {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgba(255,255,255,0.7);
+    cursor: not-allowed;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.form-group button {
+    width: auto;
+    padding: 10px 18px;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+button:disabled {
+    background: rgba(50, 50, 50, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+.status-area {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+}
+
+.status-area h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: #cccccc;
+    font-weight: 500;
+}
+
+#statusLog {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    color: #bbbbbb; /* Slightly dimmer light gray for logs */
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+} 

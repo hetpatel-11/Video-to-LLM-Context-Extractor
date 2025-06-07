@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <title>Video-to-LLM Context Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video-to-LLM Context Extractor</h1>
+
+        <div class="form-group">
+            <label for="videoFile">Selected Video:</label>
+            <input type="text" id="videoPath" placeholder="No video selected" readonly>
+            <button id="selectVideoBtn">Select Video</button>
+        </div>
+
+        <div class="form-group">
+            <label for="outputDir">Output Directory:</label>
+            <input type="text" id="outputDirPath" placeholder="No directory selected" readonly>
+            <button id="selectOutputDirBtn">Select Directory</button>
+        </div>
+
+        <div class="form-group">
+            <label for="frameInterval">Frame Interval (capture every Nth frame):</label>
+            <input type="number" id="frameInterval" value="30" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="maxPages">Max Pages per PDF (before splitting):</label>
+            <input type="number" id="maxPages" value="50" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="maxFilesize">Max PDF File Size (MB, e.g., 28 for a 30MB limit):</label>
+            <input type="number" id="maxFilesize" value="28" min="1">
+        </div>
+
+        <button id="convertBtn">Convert to PDF</button>
+
+        <div class="status-area">
+            <h2>Status & Logs:</h2>
+            <pre id="statusLog"></pre>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html> 
