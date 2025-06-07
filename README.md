@@ -3,8 +3,7 @@
 **Turn any video into a detailed, LLM-ready PDF document. Perfect for feeding visual and transcribed context into models like Claude, GPT, and Gemini.**
 Follow me on X: https://x.com/HetPatel____
 
-
-
+<img width="741" alt="Image" src="https://github.com/user-attachments/assets/de103c1d-94bf-4fa1-ab39-3b68e221babf" />
 
 
 ---
